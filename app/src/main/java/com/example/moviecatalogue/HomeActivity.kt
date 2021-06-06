@@ -64,8 +64,8 @@ class HomeActivity : AppCompatActivity() {
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         if (item.itemId == R.id.fav){
-            val uri = Uri.parse("favoriteapp://favorite")
-            startActivity(Intent(Intent.ACTION_VIEW, uri))
+            val intent = Intent(this@HomeActivity, Class.forName("com.example.moviecatalogue.favorite.FavoriteActivity"))
+            startActivity(intent)
 
         }
         return super.onOptionsItemSelected(item)
