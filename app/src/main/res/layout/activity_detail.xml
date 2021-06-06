@@ -6,7 +6,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:background="@color/dark"
     tools:context="com.example.moviecatalogue.DetailActivity"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    tools:ignore="Overdraw">
 
     <RelativeLayout
         android:layout_width="match_parent"

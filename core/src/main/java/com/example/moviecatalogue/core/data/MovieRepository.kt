@@ -2,7 +2,6 @@ package com.example.moviecatalogue.core.data
 
 import com.example.moviecatalogue.core.data.source.local.LocalDataSource
 import com.example.moviecatalogue.core.data.source.remote.RemoteDataSource
-import com.example.moviecatalogue.core.data.source.remote.response.MovieResponse
 import com.example.moviecatalogue.core.domain.model.Movie
 import com.example.moviecatalogue.core.domain.repository.IMovieRepository
 import com.example.moviecatalogue.core.utils.Utility
