@@ -11,15 +11,15 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.moviecatalogue.DetailActivity
 import com.example.moviecatalogue.R
 import com.example.moviecatalogue.core.adapter.MovieViewAdapter
-import com.example.moviecatalogue.databinding.FragmentMovieBinding
 import com.example.moviecatalogue.core.domain.model.Movie
+import com.example.moviecatalogue.databinding.FragmentMovieBinding
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import org.koin.android.viewmodel.ext.android.viewModel
 
- class MovieFragment : Fragment() {
+class MovieFragment : Fragment() {
    private val movieFavoriteViewModel: com.example.moviecatalogue.favorite.viewmodel.FavoriteViewModel by viewModel()
     private var typee = ""
     private val movieViewAdapter = MovieViewAdapter()

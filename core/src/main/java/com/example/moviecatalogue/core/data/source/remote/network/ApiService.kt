@@ -7,21 +7,21 @@ import retrofit2.http.Path
 import retrofit2.http.Query
 
 interface ApiService {
-    @GET("{film}/popular")
+    @GET("3/{film}/popular")
      suspend fun getMovie(
         @Path("film") film: String,
         @Query("api_key") api_key: String
     ): Data
 
 
-    @GET("movie/{external_id}")
+    @GET("3/movie/{external_id}")
     suspend   fun getMovieById(
         @Path("external_id") external_id: Int,
         @Query("api_key") api_key: String
     ): MovieResponse
 
 
-    @GET("tv/{external_id}")
+    @GET("3/tv/{external_id}")
     suspend  fun getTvById(
         @Path("external_id") external_id: Int,
         @Query("api_key") api_key: String

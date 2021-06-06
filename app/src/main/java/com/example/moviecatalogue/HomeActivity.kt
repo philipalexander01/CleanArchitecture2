@@ -2,7 +2,6 @@ package com.example.moviecatalogue
 
 import android.content.Intent
 import android.net.NetworkCapabilities
-import android.net.Uri
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
@@ -28,6 +27,7 @@ class HomeActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
         binding = ActivityHomeBinding.inflate(layoutInflater)
         setContentView(binding?.root)
         //check internet connection
@@ -64,7 +64,7 @@ class HomeActivity : AppCompatActivity() {
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         if (item.itemId == R.id.fav){
-            val intent = Intent(this@HomeActivity, Class.forName("com.example.moviecatalogue.favorite.FavoriteActivity"))
+            val intent = Intent(this@HomeActivity, Class.forName("com.example.moviecatalogue.favorite.activity.FavoriteActivity"))
             startActivity(intent)
 
         }
@@ -72,8 +72,22 @@ class HomeActivity : AppCompatActivity() {
     }
 
     override fun onDestroy() {
+        if(isTaskRoot){
+            finishAfterTransition()
+            }
         super.onDestroy()
         binding = null
         binding1 = null
     }
+
+    override fun onBackPressed() {
+        if(isTaskRoot){
+            finishAfterTransition()
+        }else{
+            super.onBackPressed()
+        }
+    }
+
+
+
 }
